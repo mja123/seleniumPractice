@@ -1,7 +1,7 @@
 package org.mja123;
 
+import org.mja123.homePage.HomePage;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.slf4j.Logger;
@@ -22,7 +22,7 @@ public abstract class BaseTest {
     public void setUp() throws MalformedURLException {
         LOGGER.info("Opening remote driver");
         driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), new ChromeOptions());
-        /*System.setProperty("webdriver.chrome.driver", "rcs/chromedriver.exe");
+/*        System.setProperty("webdriver.chrome.driver", "rcs/chromedriver.exe");
 
         driver = new ChromeDriver(new ChromeOptions());*/
         driver.get("https://the-internet.herokuapp.com/");

@@ -1,9 +1,8 @@
 package org.mja123.login;
 
 import org.mja123.BaseTest;
-import org.mja123.EPages;
-import org.mja123.PageNotFoundException;
-import org.mja123.SecurePage;
+import org.mja123.homePage.EPages;
+import org.mja123.homePage.PageNotFoundException;
 import org.testng.annotations.Test;
 
 import static org.testng.AssertJUnit.*;

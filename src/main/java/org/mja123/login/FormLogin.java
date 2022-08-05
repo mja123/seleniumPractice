@@ -2,7 +2,6 @@ package org.mja123.login;
 
 
 import org.mja123.BasePage;
-import org.mja123.SecurePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
