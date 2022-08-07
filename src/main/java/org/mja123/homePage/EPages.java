@@ -4,7 +4,8 @@ public enum EPages {
     FORM_LOGIN("Form Authentication"),
     DROPDOWN("Dropdown"),
     HOVER("Hovers"),
-    FRAMES("Frames");
+    FRAMES("Frames"),
+    ALERTS("JavaScript Alerts");
 
 
     private String text;

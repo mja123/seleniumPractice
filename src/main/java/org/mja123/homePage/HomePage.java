@@ -1,6 +1,7 @@
 package org.mja123.homePage;
 
 import org.mja123.BasePage;
+import org.mja123.alerts.AlertsPage;
 import org.mja123.dropdown.DropdownPage;
 import org.mja123.frames.FramesPage;
 import org.mja123.hover.HoverPage;
@@ -32,6 +33,8 @@ public class HomePage extends BasePage {
                 return new DropdownPage(driver);
             case HOVER:
                 return new HoverPage(driver);
+            case ALERTS:
+                return new AlertsPage(driver);
             default:
                 return new FramesPage(driver);
         }
