@@ -4,11 +4,12 @@ import org.mja123.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class SecurePage extends BasePage {
-    private WebElement alert;
+    private final WebElement alert;
 
-    public SecurePage(WebDriver driver) {
+    public SecurePage(RemoteWebDriver driver) {
         super(driver);
         alert = driver.findElement(By.id("flash"));
     }

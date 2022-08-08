@@ -3,12 +3,15 @@ package org.mja123.homePage;
 import org.mja123.BasePage;
 import org.mja123.alerts.AlertsPage;
 import org.mja123.dropdown.DropdownPage;
+import org.mja123.files.FileDownloadPage;
+import org.mja123.files.FileUploadsPage;
 import org.mja123.frames.FramesPage;
 import org.mja123.hover.HoverPage;
 import org.mja123.login.FormLogin;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.util.List;
 import java.util.Optional;
@@ -17,7 +20,7 @@ public class HomePage extends BasePage {
 
     private final List<WebElement> links;
 
-    public HomePage(WebDriver driver) {
+    public HomePage(RemoteWebDriver driver) {
         super(driver);
         links = driver.findElements(By.xpath("//div[@id='content']//a"));
     }
@@ -35,6 +38,10 @@ public class HomePage extends BasePage {
                 return new HoverPage(driver);
             case ALERTS:
                 return new AlertsPage(driver);
+            case FILE_UPLOADS:
+                return new FileUploadsPage(driver);
+            case FILE_DOWNLOAD:
+                return new FileDownloadPage(driver);
             default:
                 return new FramesPage(driver);
         }

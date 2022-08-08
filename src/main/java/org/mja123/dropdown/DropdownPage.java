@@ -4,6 +4,7 @@ import org.mja123.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
@@ -11,7 +12,7 @@ import java.util.Optional;
 
 public class DropdownPage extends BasePage {
 
-    public DropdownPage(WebDriver driver) {
+    public DropdownPage(RemoteWebDriver driver) {
         super(driver);
     }
 

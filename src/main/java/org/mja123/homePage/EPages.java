@@ -5,6 +5,8 @@ public enum EPages {
     DROPDOWN("Dropdown"),
     HOVER("Hovers"),
     FRAMES("Frames"),
+    FILE_UPLOADS("File Upload"),
+    FILE_DOWNLOAD("File Download"),
     ALERTS("JavaScript Alerts");
 
 

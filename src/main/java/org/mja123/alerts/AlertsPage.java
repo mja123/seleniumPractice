@@ -5,6 +5,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -14,7 +15,7 @@ public class AlertsPage extends BasePage {
     private Alert alert;
     private final WebElement RESULT;
 
-    public AlertsPage(WebDriver driver) {
+    public AlertsPage(RemoteWebDriver driver) {
         super(driver);
         this.RESULT = driver.findElement(By.id("result"));
     }

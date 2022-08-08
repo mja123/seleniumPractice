@@ -5,13 +5,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.util.List;
 
 public class HoverPage extends BasePage {
     private final List<WebElement> IMAGES;
 
-    public HoverPage(WebDriver driver) {
+    public HoverPage(RemoteWebDriver driver) {
         super(driver);
         this.IMAGES = driver.findElements(By.xpath("//div[@class='figure']"));
     }
