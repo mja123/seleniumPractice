@@ -21,7 +21,7 @@ public class FileDownloadPage extends BasePage {
 
     public void downloadDocument(String link) throws DocumentNotFoundException {
         selectLink(link).click();
-        
+
     }
     private WebElement selectLink(String link) throws DocumentNotFoundException {
         Optional<WebElement> targetElement = LINKS.stream()

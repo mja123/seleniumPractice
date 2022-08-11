@@ -5,11 +5,10 @@ import org.mja123.alerts.AlertsPage;
 import org.mja123.dropdown.DropdownPage;
 import org.mja123.files.FileDownloadPage;
 import org.mja123.files.FileUploadsPage;
-import org.mja123.frames.FramesPage;
+import org.mja123.frames.FramesPageFactory;
 import org.mja123.hover.HoverPage;
 import org.mja123.login.FormLogin;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -43,7 +42,7 @@ public class HomePage extends BasePage {
             case FILE_DOWNLOAD:
                 return new FileDownloadPage(driver);
             default:
-                return new FramesPage(driver);
+                return new FramesPageFactory(driver);
         }
     }
     private WebElement findLink(EPages page) throws PageNotFoundException {
