@@ -7,6 +7,7 @@ public enum EPages {
     FRAMES("Frames"),
     FILE_UPLOADS("File Upload"),
     FILE_DOWNLOAD("File Download"),
+    WAITS("Dynamic Loading"),
     ALERTS("JavaScript Alerts");
 
 
@@ -17,5 +18,9 @@ public enum EPages {
 
     public String getText() {
         return text;
+    }
+
+    public EPages getElement(EPages element) {
+        return element;
     }
 }

@@ -2,22 +2,22 @@ package org.mja123.frames;
 
 import org.mja123.BaseTest;
 import org.mja123.homePage.EPages;
-import org.mja123.homePage.HomePage;
 import org.mja123.homePage.PageNotFoundException;
+import org.mja123.waits.EWait;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.util.Random;
 
-import static org.testng.AssertJUnit.assertEquals;
+import static org.testng.AssertJUnit.*;
 
-public class IFrameTests extends BaseTest {
-    private IFramePage framePage;
+public class FrameTests extends BaseTest {
+    private FramePage framePage;
 
     @BeforeClass
     public void openPage() throws PageNotFoundException {
         FramesPageFactory factory = (FramesPageFactory) homePage.pageFactory(EPages.FRAMES);
-        framePage = (IFramePage) factory.frameFactory(EFrames.IFRAME);
+        framePage = (FramePage) factory.frameFactory(EFrames.IFRAME);
     }
 
     @Test
@@ -25,6 +25,7 @@ public class IFrameTests extends BaseTest {
         int index = new Random().nextInt(8);
         String message = "Test";
 
-        assertEquals(framePage.writeMessage(message, index), message);
+        framePage.changeFormat(index);
+        assertEquals(framePage.writeMessage(message), message);
     }
 }

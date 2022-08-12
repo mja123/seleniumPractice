@@ -5,10 +5,16 @@ public enum EFrames {
     IFRAME("iFrame");
 
     private final String frame;
+
     EFrames(String frame) {
         this.frame = frame;
     }
+
     public String getFrame() {
         return frame;
+    }
+
+    public EFrames getElement(EFrames element) {
+        return element;
     }
 }

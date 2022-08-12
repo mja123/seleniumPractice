@@ -8,6 +8,7 @@ import org.mja123.files.FileUploadsPage;
 import org.mja123.frames.FramesPageFactory;
 import org.mja123.hover.HoverPage;
 import org.mja123.login.FormLogin;
+import org.mja123.waits.WaitPageFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -41,8 +42,12 @@ public class HomePage extends BasePage {
                 return new FileUploadsPage(driver);
             case FILE_DOWNLOAD:
                 return new FileDownloadPage(driver);
-            default:
+            case FRAMES:
                 return new FramesPageFactory(driver);
+            case WAITS:
+                return new WaitPageFactory(driver);
+            default:
+                return null;
         }
     }
     private WebElement findLink(EPages page) throws PageNotFoundException {

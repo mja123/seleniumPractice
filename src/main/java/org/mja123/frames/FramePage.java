@@ -6,19 +6,18 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.util.List;
 
-public class IFramePage extends FramesPageFactory {
+public class FramePage extends FramesPageFactory {
 
-    public IFramePage(RemoteWebDriver driver) {
+    public FramePage(RemoteWebDriver driver) {
         super(driver);
+        System.out.println(driver.getCurrentUrl());
     }
 
-    public String writeMessage(String message, int format) {
-
-        changeFormat(format);
+    public String writeMessage(String message) {
 
         switchToChildFrame();
 
-        WebElement input = driver.findElement(By.tagName("iframe"));
+        WebElement input = driver.findElement(By.id("tinymce"));
         input.clear();
         input.sendKeys(message);
         String result = input.findElement(By.tagName("p")).getText();
@@ -28,8 +27,10 @@ public class IFramePage extends FramesPageFactory {
         return result;
     }
 
-    private void changeFormat(int index) {
-        WebElement format = driver.findElement(By.xpath("//span[text()='Format']/.."));
+    public void changeFormat(int index) {
+
+
+        WebElement format = driver.findElement(By.xpath("//button[child::span[text()='Format']]"));
 
         format.click();
         //All the divs without descendants
