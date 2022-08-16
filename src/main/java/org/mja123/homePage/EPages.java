@@ -8,6 +8,7 @@ public enum EPages {
     FILE_UPLOADS("File Upload"),
     FILE_DOWNLOAD("File Download"),
     WAITS("Dynamic Loading"),
+    MULTIPLE_DROPDOWN("Dropdown"),
     ALERTS("JavaScript Alerts");
 
 

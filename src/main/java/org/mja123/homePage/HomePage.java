@@ -7,6 +7,7 @@ import org.mja123.files.FileDownloadPage;
 import org.mja123.files.FileUploadsPage;
 import org.mja123.frames.FramesPageFactory;
 import org.mja123.hover.HoverPage;
+import org.mja123.js.MultipleDropDownPage;
 import org.mja123.login.FormLogin;
 import org.mja123.waits.WaitPageFactory;
 import org.openqa.selenium.By;
@@ -46,6 +47,8 @@ public class HomePage extends BasePage {
                 return new FramesPageFactory(driver);
             case WAITS:
                 return new WaitPageFactory(driver);
+            case MULTIPLE_DROPDOWN:
+                return new MultipleDropDownPage(driver);
             default:
                 return null;
         }
