@@ -12,7 +12,7 @@ public class FormLogin extends BasePage {
     private final WebElement passwordInput;
     private final WebElement loginButton;
 
-    public FormLogin(RemoteWebDriver driver) {
+    public FormLogin(WebDriver driver) {
         super(driver);
         this.usernameInput = driver.findElement(By.id("username"));
         this.passwordInput = driver.findElement(By.id("password"));

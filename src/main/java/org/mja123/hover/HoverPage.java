@@ -12,7 +12,7 @@ import java.util.List;
 public class HoverPage extends BasePage {
     private final List<WebElement> IMAGES;
 
-    public HoverPage(RemoteWebDriver driver) {
+    public HoverPage(WebDriver driver) {
         super(driver);
         this.IMAGES = driver.findElements(By.xpath("//div[@class='figure']"));
     }

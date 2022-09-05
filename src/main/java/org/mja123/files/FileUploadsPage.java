@@ -18,7 +18,7 @@ public class FileUploadsPage extends BasePage {
     private final WebElement FILE_UPLOAD;
     private final WebElement FILE_SUBMIT;
 
-    public FileUploadsPage(RemoteWebDriver driver) {
+    public FileUploadsPage(WebDriver driver) {
         super(driver);
         this.FILE_UPLOAD = driver.findElement(By.id("file-upload"));
         this.FILE_SUBMIT = driver.findElement(By.id("file-submit"));

@@ -12,7 +12,7 @@ import java.util.Optional;
 
 public class DropdownPage extends BasePage {
 
-    public DropdownPage(RemoteWebDriver driver) {
+    public DropdownPage(WebDriver driver) {
         super(driver);
     }
 

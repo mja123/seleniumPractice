@@ -21,7 +21,7 @@ public class HomePage extends BasePage {
 
     private final List<WebElement> links;
 
-    public HomePage(RemoteWebDriver driver) {
+    public HomePage(WebDriver driver) {
         super(driver);
         links = driver.findElements(By.xpath("//div[@id='content']//a"));
     }

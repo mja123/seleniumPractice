@@ -15,7 +15,7 @@ public class AlertsPage extends BasePage {
     private Alert alert;
     private final WebElement RESULT;
 
-    public AlertsPage(RemoteWebDriver driver) {
+    public AlertsPage(WebDriver driver) {
         super(driver);
         this.RESULT = driver.findElement(By.id("result"));
     }

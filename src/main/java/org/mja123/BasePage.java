@@ -9,9 +9,9 @@ import java.lang.invoke.MethodHandles;
 
 public abstract class BasePage {
     protected static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
-    protected RemoteWebDriver driver;
+    protected WebDriver driver;
 
-    public BasePage(RemoteWebDriver driver) {
+    public BasePage(WebDriver driver) {
         this.driver = driver;
     }
 

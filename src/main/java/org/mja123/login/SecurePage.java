@@ -9,7 +9,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 public class SecurePage extends BasePage {
     private final WebElement alert;
 
-    public SecurePage(RemoteWebDriver driver) {
+    public SecurePage(WebDriver driver) {
         super(driver);
         alert = driver.findElement(By.id("flash"));
     }

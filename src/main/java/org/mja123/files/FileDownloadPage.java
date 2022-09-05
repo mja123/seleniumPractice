@@ -13,7 +13,7 @@ import java.util.Optional;
 public class FileDownloadPage extends BasePage {
     private final List<WebElement> LINKS;
 
-    public FileDownloadPage(RemoteWebDriver driver)
+    public FileDownloadPage(WebDriver driver)
     {
         super(driver);
         this.LINKS = driver.findElements(By.xpath("//div[@id='content']//a"));
