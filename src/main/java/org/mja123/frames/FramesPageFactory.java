@@ -3,6 +3,7 @@ package org.mja123.frames;
 import org.mja123.BasePage;
 import org.mja123.homePage.PageNotFoundException;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -11,7 +12,7 @@ import java.util.Optional;
 
 public class FramesPageFactory extends BasePage {
 
-    public FramesPageFactory(RemoteWebDriver driver) {
+    public FramesPageFactory(WebDriver driver) {
         super(driver);
     }
 

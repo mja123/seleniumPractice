@@ -3,10 +3,7 @@ package org.mja123.js;
 import org.mja123.BasePage;
 import org.mja123.dropdown.DropdownPage;
 import org.mja123.dropdown.OptionNotFoundException;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
@@ -16,7 +13,7 @@ import java.util.Optional;
 
 public class MultipleDropDownPage extends BasePage {
 
-    public MultipleDropDownPage(RemoteWebDriver driver) {
+    public MultipleDropDownPage(WebDriver driver) {
         super(driver);
     }
 

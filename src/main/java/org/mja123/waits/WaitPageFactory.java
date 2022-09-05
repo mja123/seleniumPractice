@@ -3,6 +3,7 @@ package org.mja123.waits;
 import org.mja123.BasePage;
 import org.mja123.homePage.PageNotFoundException;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -13,7 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class WaitPageFactory extends BasePage {
-    public WaitPageFactory(RemoteWebDriver driver) {
+    public WaitPageFactory(WebDriver driver) {
         super(driver);
     }
 

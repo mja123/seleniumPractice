@@ -1,6 +1,7 @@
 package org.mja123.frames;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -8,7 +9,7 @@ import java.util.List;
 
 public class FramePage extends FramesPageFactory {
 
-    public FramePage(RemoteWebDriver driver) {
+    public FramePage(WebDriver driver) {
         super(driver);
         System.out.println(driver.getCurrentUrl());
     }
