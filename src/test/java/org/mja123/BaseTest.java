@@ -41,7 +41,7 @@ public abstract class BaseTest {
         //driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeOptions);
         //((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
 
-        System.setProperty("webdriver.chrome.driver", "rcs/chromedriver-mac105");
+        System.setProperty("webdriver.chrome.driver", "rcs/chromedriverLinux105");
 
         driver = new ChromeDriver(new ChromeOptions());
         driver.get("https://the-internet.herokuapp.com/");
