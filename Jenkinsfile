@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Result') {
             steps {
-                pwd
+                echo 'Trying another commands'
             }
         }
     }
