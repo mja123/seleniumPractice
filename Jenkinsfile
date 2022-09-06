@@ -8,7 +8,12 @@ pipeline {
         }
         stage('Result') {
             steps {
-                echo 'Trying another commands'
+                sh 'pwd'
+            }
+        }
+        stage('Call another job') {
+            steps {
+                build 'firstJob'
             }
         }
     }
